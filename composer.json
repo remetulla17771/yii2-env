@@ -1,13 +1,12 @@
 {
   "name": "deepn9x/yii2-env",
-  "description": "DOT-ENV",
+  "description": "Simple .env file loader extension for Yii2 framework",
   "type": "yii2-extension",
-  "minimum-stability": "dev",
   "keywords": [
-    "Yii2 .env class",
     "yii2",
-    "extension",
-    "plugin"
+    "env",
+    "dotenv",
+    "extension"
   ],
   "license": "MIT",
   "authors": [
@@ -17,22 +16,15 @@
     }
   ],
   "require": {
+    "php": ">=7.4",
     "yiisoft/yii2": "~2.0.0"
   },
   "autoload": {
     "psr-4": {
-      "deepn9x\\env\\": ""
+      "deepn9x\\env\\": "src/"
     }
   },
   "extra": {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://github.com/deepn9x/yii2-env"
-    }
-  ]
+    "bootstrap": "deepn9x\\env\\dotenv"
+  }
 }
